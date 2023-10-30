@@ -1,0 +1,14 @@
+C:\Users\Valdiclei\Desktop\Passagem\Passagem\bin\Debug\net7.0\Passagem.exe
+C:\Users\Valdiclei\Desktop\Passagem\Passagem\bin\Debug\net7.0\Passagem.deps.json
+C:\Users\Valdiclei\Desktop\Passagem\Passagem\bin\Debug\net7.0\Passagem.runtimeconfig.json
+C:\Users\Valdiclei\Desktop\Passagem\Passagem\bin\Debug\net7.0\Passagem.dll
+C:\Users\Valdiclei\Desktop\Passagem\Passagem\bin\Debug\net7.0\Passagem.pdb
+C:\Users\Valdiclei\Desktop\Passagem\Passagem\obj\Debug\net7.0\Passagem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Valdiclei\Desktop\Passagem\Passagem\obj\Debug\net7.0\Passagem.AssemblyInfoInputs.cache
+C:\Users\Valdiclei\Desktop\Passagem\Passagem\obj\Debug\net7.0\Passagem.AssemblyInfo.cs
+C:\Users\Valdiclei\Desktop\Passagem\Passagem\obj\Debug\net7.0\Passagem.csproj.CoreCompileInputs.cache
+C:\Users\Valdiclei\Desktop\Passagem\Passagem\obj\Debug\net7.0\Passagem.dll
+C:\Users\Valdiclei\Desktop\Passagem\Passagem\obj\Debug\net7.0\refint\Passagem.dll
+C:\Users\Valdiclei\Desktop\Passagem\Passagem\obj\Debug\net7.0\Passagem.pdb
+C:\Users\Valdiclei\Desktop\Passagem\Passagem\obj\Debug\net7.0\Passagem.genruntimeconfig.cache
+C:\Users\Valdiclei\Desktop\Passagem\Passagem\obj\Debug\net7.0\ref\Passagem.dll
