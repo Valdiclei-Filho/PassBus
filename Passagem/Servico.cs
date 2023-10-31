@@ -14,59 +14,38 @@ namespace Passagem
             Passagens.Add(passagem);
         }
 
-        public void Deletar(TipoIdentificacao identificacao)
+        public void Deletar(string identificacao)
         {
             for (int i = 0; i < Passagens.Count; i++)
             {
                 var item = Passagens[i];
 
-                switch (identificacao) 
+                if (item.Cliente.Nome == identificacao || item.Cliente.Cpf == identificacao)
                 {
-                    case TipoIdentificacao.Nome:
-                        Passagens.Remove(item);
-                    break;
-
-                    case TipoIdentificacao.Cpf:
-                        Passagens.Remove(item);
-                    break;
+                    Passagens.Remove(item);
                 }
             }
         }
 
-        public void Apresentar(TipoIdentificacao identificacao)
+        public void Apresentar(string identificacao)
         {
             bool encontrou = false;
 
             foreach (var item in Passagens)
             {
-                switch (identificacao)
+                if (item.Cliente.Nome == identificacao || item.Cliente.Cpf == identificacao)
                 {
-                    case TipoIdentificacao.Nome:
+                    Console.WriteLine(item.Cliente.Nome);
+                    Console.WriteLine(item.Cliente.Idade);
+                    Console.WriteLine(item.Cliente.Cpf);
+                    Console.WriteLine(item.Destino);
+                    Console.WriteLine(item.Poltrona);
+                    Console.WriteLine(item.HorarioPartida);
+                    Console.WriteLine(item.HorarioChegada);
+                    Console.WriteLine(item.FormaPagamento);
+                    Console.WriteLine(item.Valor);
 
-                        Console.WriteLine(item.Cliente.Nome);
-                        Console.WriteLine(item.Cliente.Idade);
-                        Console.WriteLine(item.Cliente.Cpf);
-                        Console.WriteLine(item.Poltrona);
-                        Console.WriteLine(item.HorarioPartida);
-                        Console.WriteLine(item.HorarioChegada);
-                        Console.WriteLine(item.FormaPagamento);
-                        Console.WriteLine(item.Valor);
-
-                        encontrou = true;
-                    break;
-
-                    case TipoIdentificacao.Cpf:
-
-                        Console.WriteLine(item.Cliente.Nome);
-                        Console.WriteLine(item.Cliente.Idade);
-                        Console.WriteLine(item.Cliente.Cpf);
-                        Console.WriteLine(item.Poltrona);
-                        Console.WriteLine(item.HorarioPartida);
-                        Console.WriteLine(item.HorarioChegada);
-                        Console.WriteLine(item.FormaPagamento);
-                        Console.WriteLine(item.Valor);
-
-                        encontrou = true;
+                    encontrou = true;
                     break;
                 }
             }
@@ -76,7 +55,7 @@ namespace Passagem
             }
         }
 
-        public void Alterar(TipoIdentificacao identificacao, string nome, int idade, string cpf, double valor, DateTime horarioPartida,
+        public void Alterar(string identificacao, string nome, int idade, string cpf, double valor, string destino, DateTime horarioPartida,
                             DateTime horarioChegada, string formaPagamento, string poltrona)
         {
             bool encontrou = false;
@@ -85,35 +64,19 @@ namespace Passagem
             {
                 var item = Passagens[i];
 
-                switch (identificacao)
+                if (item.Cliente.Nome == identificacao || item.Cliente.Cpf == identificacao)
                 {
-                    case TipoIdentificacao.Nome:
+                    item.Cliente.Nome = nome;
+                    item.Cliente.Idade = idade;
+                    item.Cliente.Cpf = cpf;
+                    item.Destino = destino;
+                    item.HorarioPartida = horarioPartida;
+                    item.HorarioChegada = horarioChegada;
+                    item.Poltrona = poltrona;
+                    item.FormaPagamento = formaPagamento;
+                    item.Valor = valor;
 
-                        item.Cliente.Nome = nome;
-                        item.Cliente.Idade = idade;
-                        item.Cliente.Cpf = cpf;
-                        item.HorarioPartida = horarioPartida;
-                        item.HorarioChegada = horarioChegada;
-                        item.Poltrona = poltrona;
-                        item.FormaPagamento = formaPagamento;
-                        item.Valor = valor;
-
-                        encontrou = true;
-                    break;
-
-                    case TipoIdentificacao.Cpf:
-
-                        item.Cliente.Nome = nome;
-                        item.Cliente.Idade = idade;
-                        item.Cliente.Cpf = cpf;
-                        item.HorarioPartida = horarioPartida;
-                        item.HorarioChegada = horarioChegada;
-                        item.Poltrona = poltrona;
-                        item.FormaPagamento = formaPagamento;
-                        item.Valor = valor;
-
-                        encontrou = true;
-                    break;
+                    encontrou = true;
                 }
             }
             if (!encontrou)
