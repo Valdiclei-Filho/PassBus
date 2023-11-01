@@ -49,6 +49,9 @@
             label9 = new Label();
             label10 = new Label();
             label11 = new Label();
+            Excluir = new Button();
+            button1 = new Button();
+            button2 = new Button();
             SuspendLayout();
             // 
             // nome_Cliente
@@ -81,6 +84,7 @@
             Confirmar.TabIndex = 3;
             Confirmar.Text = "Confirmar";
             Confirmar.UseVisualStyleBackColor = true;
+            Confirmar.Click += Confirmar_Click;
             // 
             // label1
             // 
@@ -227,11 +231,42 @@
             label11.TabIndex = 18;
             label11.Text = "Poltrona";
             // 
+            // Excluir
+            // 
+            Excluir.Location = new Point(24, 207);
+            Excluir.Name = "Excluir";
+            Excluir.Size = new Size(693, 29);
+            Excluir.TabIndex = 21;
+            Excluir.Text = "Excluir";
+            Excluir.UseVisualStyleBackColor = true;
+            Excluir.Click += Excluir_Click;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(24, 242);
+            button1.Name = "button1";
+            button1.Size = new Size(693, 29);
+            button1.TabIndex = 22;
+            button1.Text = "Alterar";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(24, 277);
+            button2.Name = "button2";
+            button2.Size = new Size(693, 29);
+            button2.TabIndex = 23;
+            button2.Text = "Apresentar";
+            button2.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(743, 333);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(Excluir);
             Controls.Add(label9);
             Controls.Add(label10);
             Controls.Add(label11);
@@ -254,7 +289,7 @@
             Controls.Add(idade_Cliente);
             Controls.Add(nome_Cliente);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Inserir Passagem";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -283,5 +318,8 @@
         private Label label9;
         private Label label10;
         private Label label11;
+        private Button Excluir;
+        private Button button1;
+        private Button button2;
     }
 }

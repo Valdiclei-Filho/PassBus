@@ -11,13 +11,13 @@ namespace Passagem
         public Guid Id { get; set; }
         public double Valor { get; set; }
         public string Destino { get; set; }
-        public DateTime HorarioPartida { get; set; }
-        public DateTime HorarioChegada { get; set; }
+        public string HorarioPartida { get; set; }
+        public string HorarioChegada { get; set; }
         public string FormaPagamento { get; set; }
         public string Poltrona { get; set; }
         public Cliente Cliente { get; set; }
 
-        public PassagemOnibus(double valor, string destino, DateTime horarioPartida, DateTime horarioChegada, string formaPagamento, string poltrona, Cliente cliente)
+        public PassagemOnibus(double valor, string destino, string horarioPartida, string horarioChegada, string formaPagamento, string poltrona, Cliente cliente)
         {
             Id = Guid.NewGuid();
             Valor = valor;
